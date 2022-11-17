@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../lib/app');
 
 describe('color routes', () => {
-  it.skip('/colors/purple should return ["red", "blue"]', async () => {
+  it('/colors/purple should return ["red", "blue"]', async () => {
     const resp = await request(app).get('/colors/purple');
     expect(resp.body).toEqual(['red', 'blue']);
   });
@@ -10,7 +10,7 @@ describe('color routes', () => {
     const resp = await request(app).get('/colors/orange');
     expect(resp.body).toEqual(['red', 'yellow']);
   });
-  it.skip('/colors/green should return ["red", "blue"]', async () => {
+  it.skip('/colors/green should return ["yellow", "blue"]', async () => {
     const resp = await request(app).get('/colors/green');
     expect(resp.body).toEqual(['yellow', 'blue']);
   });
